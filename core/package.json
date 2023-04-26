@@ -1,0 +1,61 @@
+{
+  "name": "@uniswap/v2-core",
+  "description": "🎛 Core contracts for the UniswapV2 protocol",
+  "version": "1.0.1",
+  "homepage": "https://uniswap.org",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Uniswap/uniswap-v2-core"
+  },
+  "keywords": [
+    "uniswap",
+    "ethereum",
+    "v2",
+    "core",
+    "uniswap-v2"
+  ],
+  "files": [
+    "contracts",
+    "build"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.3",
+    "@nomiclabs/hardhat-etherscan": "^2.1.4",
+    "@typechain/ethers-v5": "^8.0.5",
+    "@typechain/hardhat": "^3.0.0",
+    "@types/chai": "^4.2.6",
+    "@types/mocha": "^5.2.7",
+    "dotenv": "^10.0.0",
+    "hardhat-abi-exporter": "^2.3.1",
+    "chai": "^4.2.0",
+    "ethereum-waffle": "^2.4.1",
+    "ethereumjs-util": "^6.2.0",
+    "mocha": "^6.2.2",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.0",
+    "solc": "0.5.16",
+    "tslog": "^3.2.2",
+    "typechain": "^6.0.5",
+    "@matterlabs/hardhat-zksync-deploy": "^0.6.3",
+    "@matterlabs/hardhat-zksync-solc": "^0.3.16",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.14.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4",
+    "zksync-web3": "^0.14.3"
+  },
+  "scripts": {
+    "lint": "yarn prettier ./test/*.ts --check",
+    "lint:fix": "yarn prettier ./test/*.ts --write",
+    "clean": "rimraf ./build/",
+    "precompile": "yarn clean",
+    "compile": "waffle .waffle.json",
+    "pretest": "yarn compile",
+    "test": "mocha",
+    "prepublishOnly": "yarn test"
+  },
+  "license": "GPL-3.0-or-later"
+}
