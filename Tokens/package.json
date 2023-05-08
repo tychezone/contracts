@@ -21,8 +21,11 @@
   },
   "scripts": {
     "test": "NODE_ENV=test hardhat test --network zkSyncTestnet",
-    "deploy": "yarn hardhat deploy-zksync --script deploy-greeter.ts",
-    "greet": "yarn hardhat deploy-zksync --script use-greeter.ts"
+    "deploy:all": "yarn hardhat deploy-zksync",
+    "deploy:tyche": "yarn hardhat deploy-zksync --script deploy-tyche.ts",
+    "deploy:faucet":  "yarn hardhat deploy-zksync --script deploy-faucet.ts",
+    "deploy:tk1":  "yarn hardhat deploy-zksync --script deploy-tk1.ts",
+    "compile": "rm -rf cache-zk artifacts-zk && yarn hardhat compile"
   },
   "dependencies": {
     "@openzeppelin/contracts": "2.5.1"

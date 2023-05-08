@@ -4,8 +4,8 @@ import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { Deployer } from "@matterlabs/hardhat-zksync-deploy";
 
 // load env file
-import dotenv from "dotenv";
-dotenv.config();
+import {config} from "dotenv";
+config();
 
 // load wallet private key from env file
 const PRIVATE_KEY = process.env.WALLET_PRIVATE_KEY;

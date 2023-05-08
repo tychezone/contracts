@@ -4,8 +4,8 @@ import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { Deployer } from "@matterlabs/hardhat-zksync-deploy";
 
 // load env file
-import dotenv from "dotenv";
-dotenv.config();
+import {config} from "dotenv";
+config();
 
 // load wallet private key from env file
 const PRIVATE_KEY = process.env.WALLET_PRIVATE_KEY;
@@ -54,3 +54,11 @@ export default async function (hre: HardhatRuntimeEnvironment) {
   const contractAddress = greeterContract.address;
   console.log(`${artifact.contractName} was deployed to ${contractAddress}`);
 }
+
+// 0x03088bb5f7e2dF5601E2dB6F03f4B987bB0710aA
+//0xC1A87986fA49Cc885871F371f3Ca4Ac6d8e555ba
+// 0xcBacDE1464a2B8E559B5Ea1A2FCC6341742AdAa3
+// 0xC9F841435105BA6D90452d894B4537D74EF65AA7
+
+//0x1ae74d3EFF4f244827bce15511C3E44ef814755b
+//0x2DF654d7E40be3fB9A01e812Fa779199aFd7404d

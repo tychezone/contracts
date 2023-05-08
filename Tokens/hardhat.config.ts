@@ -31,7 +31,14 @@ const config: HardhatUserConfig = {
     zkSyncTestnet,
   },
   solidity: {
-    version: "0.5.16",
+      compilers: [
+          {
+              version: "0.5.16",
+          },
+          {
+              version: "0.6.12"
+          }
+      ]
   },
 };
 
